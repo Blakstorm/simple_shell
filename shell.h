@@ -7,7 +7,7 @@
 #include <string.h>
 #include <stddef.h>
 #include <errno.h>
-#include <sys/types.h> 
+#include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
 #include <signal.h>
@@ -20,16 +20,17 @@
 /********** STRUCTURES ************/
 
 /**
- *  * struct info- struct for the program's data
- *   * @program_name: the name of the executable
- *    * @input_line: pointer to the input read for _getline
- *     * @command_name: pointer to the first command typed by the user
- *      * @exec_counter: number of excecuted comands
- *       * @file_descriptor: file descriptor to the input of commands
- *        * @tokens: pointer to array of tokenized input
- *         * @env: copy of the environ
- *          * @alias_list: array of pointers with aliases.
- *           */
+ * struct info- struct for the program's data
+ * @program_name: the name of the executable
+ * @input_line: pointer to the input read for _getline
+ * @command_name: pointer to the first command typed by the user
+ * @exec_counter: number of excecuted comands
+ * @file_descriptor: file descriptor to the input of commands
+ * @tokens: pointer to array of tokenized input
+ * @env: copy of the environ
+ * @alias_list: array of pointers with aliases.
+*/
+
 typedef struct info
 {
 		char *program_name;
@@ -43,10 +44,11 @@ typedef struct info
 } data_of_program;
 
 /**
- *  * struct builtins - struct for the builtins
- *   * @builtin: the name of the builtin
- *    * @function: the associated function to be called for each builtin
- *     */
+ * * struct builtins - struct for the builtins
+ *  * @builtin: the name of the builtin
+ *   * @function: the associated function to be called for each builtin
+*/
+
 typedef struct builtins
 {
 		char *builtin;
